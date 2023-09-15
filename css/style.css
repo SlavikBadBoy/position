@@ -1,0 +1,122 @@
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+body {
+  padding-top: 100px;
+}
+.box {
+  width: 400px;
+  margin: 0 auto;
+  border: 2px dashed black;
+  height: 300px;
+  border-radius: 50px 100px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+.box img {
+  width: 100%;
+  height: 100%;
+}
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0000004d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+}
+.overlay_text {
+  color: #fff;
+  font-size: 2rem;
+}
+.box:hover .overlay {
+  transform: translateY(0);
+}
+.overlay_buy {
+  background-color: green;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 10px;
+  font-size: 2rem;
+  outline: none;
+}
+/* фіксований header */
+.header {
+  padding: 10px 50px;
+  background-color: skyblue;
+  box-shadow: 2px 2px 4px 4px #7a7d7d;
+  min-height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.menu {
+  max-width: 600px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.menu_item {
+  position: relative;
+  border: 2px solid tomato;
+}
+.menu_link {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: teal;
+  text-decoration: none;
+  transition: background-color 0.5s ease;
+}
+.submenu {
+  background-color: #ccc;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  display: none;
+}
+.submenu a {
+  display: block;
+  margin-bottom: 10px;
+  opacity: 0.7;
+  transition: opacity 0.5s ease;
+}
+.menu_item:hover .submenu{
+  display: block;
+}
+.menu_item:hover .menu_link{
+background-color: rosybrown;
+}
+.submenu{
+  opacity: 1;
+  cursor: pointer;
+}
+/* ============================================== */
+/* Категорії */
+.category{
+  margin-bottom: 30px;
+}
+.category_title{
+  text-align: center;
+}
+.container{
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
